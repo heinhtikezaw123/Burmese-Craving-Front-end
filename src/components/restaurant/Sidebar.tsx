@@ -19,7 +19,7 @@ export default function Sidebar() {
 
     return (
         <aside className="w-64 h-screen bg-white shadow-md p-6">
-            <h2 className="text-2xl font-bold mb-8 text-green-600">Restaurant</h2>
+            <h2 className="text-2xl font-bold mb-8 text-primary">Restaurant</h2>
             <nav className="flex flex-col gap-4">
                 {menuItems.map((item) => (
                     <Link
