@@ -1,0 +1,22 @@
+{
+  "shopItems": [
+    {
+      "id": 1,
+      "name": "Mohinga",
+      "description": "Traditional Burmese fish noodle soup.",
+      "price": 2.99,
+      "imageUrl": "https://th.bing.com/th/id/OIP.I9koUK7loMkCuRJC1IwXqAHaE7?cb=iwp1&rs=1&pid=ImgDetMain",
+      "category": "Breakfast",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Shan Noodles",
+      "description": "Sticky rice noodles with chicken or pork and savory tomato sauce.",
+      "price": 3.49,
+      "imageUrl": "https://www.atravel.blog/content/images/Shan_Noodles.webp",
+      "category": "Lunch",
+      "available": false
+    }
+  ]
+}
