@@ -12,7 +12,7 @@ export default function TopNav() {
     const dispatch = useDispatch();
 
     return (
-        <header className="h-16 bg-white border-b px-2 sm:px-6 flex items-center justify-between">
+        <header className="h-16 bg-white  shadow px-2 sm:px-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
                 {/* Menu icon (mobile only) */}
                 <button onClick={() => dispatch(toggleSidebar())} className="lg:hidden text-2xl text-gray-700">

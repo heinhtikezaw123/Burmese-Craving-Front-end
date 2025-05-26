@@ -13,21 +13,16 @@ export default function RestaurantLayout({
     return (
         <div className="flex min-h-screen">
             {/* Sidebar */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block fixed top-0 left-0 h-screen w-64 z-20">
                 <Sidebar />
             </div>
 
             {/* Mobile Sidebar Overlay */}
             <MobileSidebar />
 
-
-            {/* Main Content */}
-            <div className="flex flex-col flex-1">
-                {/* Top Nav */}
+            <div className="lg:pl-64 flex flex-col min-h-screen w-full">
                 <TopNav />
-
-                {/* Page Content */}
-                <main className="flex-1 p-4 bg-gray-50">{children}</main>
+                <main className="flex-1 p-4 overflow-auto">{children}</main>
             </div>
         </div>
     );

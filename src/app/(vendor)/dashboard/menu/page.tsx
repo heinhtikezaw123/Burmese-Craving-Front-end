@@ -57,7 +57,7 @@ const Page = () => {
   };
 
   return (
-    <div>
+    <div className='w-full'>
       <div className="flex justify-between items-center">
         <h1 className="font-semibold text-xl">Menu Lists</h1>
         <button

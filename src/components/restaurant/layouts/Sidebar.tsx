@@ -59,7 +59,7 @@ export default function Sidebar() {
 
     };
     return (
-        <aside className="w-64 h-screen shadow-lg flex flex-col">
+        <aside className="w-64 h-screen shadow-lg flex flex-col bg-white">
             <h2 className="text-xl font-bold p-4 capitalize bg-primary text-white">{role.replace(/([A-Z])/g, ' $1')}</h2>
 
             {/* Scrollable Menu Area */}
@@ -106,7 +106,7 @@ export default function Sidebar() {
             <div className="p-4">
                 <button
                     onClick={handleLogout}
-                    className="w-full hover:bg-white/10 hover:cursor-pointer p-2 text-white border rounded"
+                    className="w-full hover:bg-white/10 hover:cursor-pointer p-2 text-primary border rounded"
                 >
                     Logout
                 </button>
