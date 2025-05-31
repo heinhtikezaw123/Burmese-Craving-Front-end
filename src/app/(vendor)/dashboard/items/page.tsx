@@ -7,9 +7,61 @@ import food from "@/assets/images/default/burma-superstar-famous-tea-leaf-salad-
 import SearchInput from '@/components/ui/SearchInput'
 import { BiSolidDashboard } from 'react-icons/bi'
 import { IoListOutline } from 'react-icons/io5'
+import FoodCard from '@/components/restaurant/item/FoodCart'
+
+const foods = [
+  {
+    id: 1,
+    title: 'Tea Salad',
+    description: 'Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour...',
+    price: 200,
+    qty: 120,
+    imageSrc: food,
+    tag: 'Popular',
+  },
+  {
+    id: 2,
+    title: 'Tea Salad',
+    description: 'Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour...',
+    price: 200,
+    qty: 120,
+    imageSrc: food,
+    tag: 'Popular',
+  },
+  {
+    id: 3,
+    title: 'Tea Salad',
+    description: 'Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour...',
+    price: 200,
+    qty: 120,
+    imageSrc: food,
+    tag: 'Popular',
+  },
+  {
+    id: 4,
+    title: 'Tea Salad',
+    description: 'Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour...',
+    price: 200,
+    qty: 120,
+    imageSrc: food,
+    tag: 'Popular',
+  },
+  {
+    id: 5,
+    title: 'Tea Salad',
+    description: 'Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour...',
+    price: 200,
+    qty: 120,
+    imageSrc: food,
+    tag: 'Popular',
+  },
+  // Add more items here
+]
 
 const page = () => {
   const [query, setQuery] = useState('');
+
+
 
   return (
     <div className="w-full">
@@ -100,96 +152,9 @@ const page = () => {
             <h3 className='text-gray-600 font-bold text-xl mb-4 '>Popular  (10)</h3>
             <div className="flex flex-wrap">
               {/* Item Card */}
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+              {foods.map(food => (
+                <FoodCard key={food.id} {...food} />
+              ))}
 
             </div>
             <div className="flex justify-center items-center mt-10">
@@ -202,97 +167,9 @@ const page = () => {
             <h3 className='text-gray-600 font-bold text-xl mb-4 '>Menu - 1  (10)</h3>
             <div className="flex flex-wrap">
               {/* Item Card */}
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-                <div className="p-1">
-                  <div className="w-full h-52 rounded-t-lg overflow-hidden">
-                    <Image src={food} alt="" width={100} height={100} className='w-full h-full object-cover' />
-                  </div>
-                  <div className="mt-1">
-                    <p className='text-primary'>Popular</p>
-                    <p>Tea Salad</p>
-                    <p className='font-bold'>$200</p>
-                    <p className='line-clamp-3 text-sm text-gray-500'>Made with thick rice noodles, curried chicken, hard-boiled eggs, and chickpea flour, all mixed with aromatic spices and garnished with crispy toppings</p>
-                    <div className="font-bold">
-                      <span className='text-gray-600'>Qty : </span>
-                      <span>120</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
+              {foods.map(food => (
+                <FoodCard key={food.id} {...food} />
+              ))}
             </div>
             <div className="flex justify-center items-center mt-10">
               <button type='button' className='font-bold cursor-pointer'>Load More</button>
