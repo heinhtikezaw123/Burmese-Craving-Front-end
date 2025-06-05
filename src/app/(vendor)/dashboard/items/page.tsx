@@ -8,6 +8,7 @@ import SearchInput from '@/components/ui/SearchInput'
 import { BiSolidDashboard } from 'react-icons/bi'
 import { IoListOutline } from 'react-icons/io5'
 import FoodCard from '@/components/restaurant/item/FoodCart'
+import { useRouter } from 'next/navigation'
 
 const foods = [
   {
@@ -61,7 +62,11 @@ const foods = [
 const page = () => {
   const [query, setQuery] = useState('');
 
+  const router = useRouter()
 
+  const handleCreateClick = () => {
+    router.push(`/dashboard/items/create`)
+  }
 
   return (
     <div className="w-full">
@@ -72,6 +77,8 @@ const page = () => {
             <p className='text-center'>Got something tasty to share? Click here to add your delicious dish!</p>
             <div>
               <ButtonOutline
+                onClick={handleCreateClick}
+
                 type="button"
                 label={
                   <div className="flex justify-center items-center">

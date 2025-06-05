@@ -9,7 +9,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
 
 export const Input = ({ label, error, as = 'input', ...props }: InputProps) => {
     const commonClasses =
-        'w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary';
+        'w-full px-4 py-2 border rounded-md hover:border-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/50';
 
     return (
         <div className="w-full mb-4">
