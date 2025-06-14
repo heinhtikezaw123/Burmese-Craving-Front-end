@@ -1,7 +1,7 @@
 {
   "shopItems": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Mohinga",
       "description": "Traditional Burmese fish noodle soup.",
       "price": 2.99,
@@ -10,13 +10,37 @@
       "available": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Shan Noodles",
       "description": "Sticky rice noodles with chicken or pork and savory tomato sauce.",
       "price": 3.49,
       "imageUrl": "https://www.atravel.blog/content/images/Shan_Noodles.webp",
       "category": "Lunch",
       "available": false
+    }
+  ],
+  "coupons": [
+    {
+      "id": "1",
+      "title": "2% OFF Your Next Meal",
+      "code": "SAVE20",
+      "minOrder": 25,
+      "maxUses": 100,
+      "expiredDate": "2025-12-31",
+      "status": "Inactive",
+      "percentage": 20,
+      "usedCount": 20
+    },
+    {
+      "id": "ecf8",
+      "title": "fjkals",
+      "code": "fjlaks",
+      "percentage": 33,
+      "minOrder": 20,
+      "maxUses": 324,
+      "expiredDate": "2025-06-30",
+      "status": "Inactive",
+      "usedCount": 0
     }
   ]
 }
