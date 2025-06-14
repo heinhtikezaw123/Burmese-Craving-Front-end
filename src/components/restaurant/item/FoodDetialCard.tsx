@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import PortionSelector from './PortionSelector'
 
 interface VariantItem {
@@ -22,6 +23,7 @@ interface Props {
     totalSold: number
     imageSrc: string
     variants: Variant[]
+    id?: string | number // Assuming each food has an ID
 }
 
 const FoodDetailCard: React.FC<Props> = ({
@@ -31,6 +33,7 @@ const FoodDetailCard: React.FC<Props> = ({
     totalSold,
     imageSrc,
     variants,
+    id,
 }) => {
     const [selectedOptions, setSelectedOptions] = useState(() =>
         variants.map((variant) => ({
@@ -39,12 +42,16 @@ const FoodDetailCard: React.FC<Props> = ({
         }))
     )
 
-    const handleSelect = (variantId: number, item: VariantItem) => {
-        setSelectedOptions((prev) =>
-            prev.map((v) =>
-                v.variantId === variantId ? { ...v, selected: item } : v
-            )
-        )
+    const router = useRouter()
+
+    const handleEdit = () => {
+        // Replace with your edit route
+        router.push(`edit/${id}`)
+    }
+
+    const handleDelete = () => {
+        // TODO: Add your delete logic here
+        console.log('Delete clicked')
     }
 
     const additionalPrice = selectedOptions.reduce(
@@ -92,8 +99,18 @@ const FoodDetailCard: React.FC<Props> = ({
                 </div>
 
                 <div className="flex gap-4 mt-6">
-                    <button className="flex-1 py-2 bg-orange-500 text-white rounded-md font-medium">Edit</button>
-                    <button className="flex-1 py-2 border border-orange-500 text-orange-500 rounded-md font-medium">Delete</button>
+                    <button
+                        className="flex-1 py-2 bg-orange-500 hover:bg-primary text-white rounded-md font-medium cursor-pointer"
+                        onClick={handleEdit}
+                    >
+                        Edit
+                    </button>
+                    <button
+                        className="flex-1 py-2 border border-orange-500 text-orange-500 rounded-md font-medium"
+                        onClick={handleDelete}
+                    >
+                        Delete
+                    </button>
                 </div>
             </div>
         </div>

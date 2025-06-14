@@ -5,6 +5,8 @@ import "@/styles/globals.css"
 import Providers from "./providers";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'; // Required styles
+import RouteLoader from '@/components/RouteLoader'
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
+          <RouteLoader />
+
           {children}
           <ToastContainer
             position="top-right"

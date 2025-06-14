@@ -2,9 +2,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-// import authReducer from './slices/authSlice';
 import authReducer from './slices/authSlice'
 import sidebarReducer from './slices/sidebarSlice'
+import tabReducer from './slices/tabSlice'
 
 
 import { apiSlice } from "@/services/apiSlice";
@@ -31,6 +31,7 @@ const persistConfig: PersistConfigType = {
 const rootReducer = combineReducers({
     auth: authReducer,
 	sidebar: sidebarReducer,
+		tab:tabReducer,
 	[apiSlice.reducerPath]: apiSlice.reducer,
 });
 
