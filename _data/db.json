@@ -42,5 +42,210 @@
       "status": "Inactive",
       "usedCount": 0
     }
+  ],
+  "orders": [
+    {
+      "id": "101",
+      "orderID": "ORD001",
+      "customerName": "Alice Smith",
+      "customerPhone": "234569456",
+      "orderDate": "2025-06-14T09:00:00Z",
+      "status": "Pending",
+      "totalAmount": 120,
+      "orderType": "pickup",
+      "deliveryAddress": null,
+      "items": [
+        {
+          "id": "1",
+          "quantity": 1,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 5,
+          "note": "No onions",
+          "callMe": true,
+          "variants": [
+            {
+              "title": "Size",
+              "selected": { "label": "Medium", "price": 0 }
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "quantity": 1,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 5,
+          "note": "",
+          "callMe": false,
+          "variants": [
+            {
+              "title": "Size",
+              "selected": { "label": "Medium", "price": 0 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "orderID": "ORD002",
+      "customerName": "Bob Johnson",
+      "customerPhone": "234569456",
+      "orderDate": "2025-06-13T09:30:00Z",
+      "status": "Placed",
+      "totalAmount": 200,
+      "orderType": "delivery",
+      "deliveryAddress": {
+        "street": "99 Park Lane",
+        "city": "Mandalay",
+        "phone": "09761234567"
+      },
+      "items": [
+        {
+          "id": "3",
+          "quantity": 2,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 5,
+          "note": "Extra sauce",
+          "callMe": false,
+          "variants": [
+            {
+              "title": "Size",
+              "selected": { "label": "Large", "price": 3 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "orderID": "ORD003",
+      "customerName": "Charlie Lee",
+      "customerPhone": "234569456",
+      "orderDate": "2025-06-12T10:00:00Z",
+      "status": "Cooking",
+      "totalAmount": 250,
+      "orderType": "pickup",
+      "deliveryAddress": null,
+      "items": [
+        {
+          "id": "4",
+          "quantity": 1,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 6,
+          "note": "",
+          "callMe": true,
+          "variants": [
+            {
+              "title": "Add-ons",
+              "selected": { "label": "Extra Spicy", "price": 1 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "104",
+      "orderID": "ORD004",
+      "customerName": "Diana Wang",
+      "customerPhone": "234569456",
+      "orderDate": "2025-05-14T10:30:00Z",
+      "status": "Delivered",
+      "totalAmount": 350,
+      "orderType": "delivery",
+      "deliveryAddress": {
+        "street": "56 Garden Ave",
+        "city": "Yangon",
+        "phone": "09450008888"
+      },
+      "items": [
+        {
+          "id": "5",
+          "quantity": 3,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 5,
+          "note": "No mayo",
+          "callMe": false,
+          "variants": [
+            {
+              "title": "Size",
+              "selected": { "label": "Small", "price": 0 }
+            },
+            {
+              "title": "Drink",
+              "selected": { "label": "Coke", "price": 1 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "105",
+      "orderID": "ORD005",
+      "customerName": "Ethan Ko",
+      "customerPhone": "234569456",
+      "orderDate": "2025-05-14T11:00:00Z",
+      "status": "Cancelled",
+      "totalAmount": 100,
+      "orderType": "pickup",
+      "deliveryAddress": null,
+      "items": [
+        {
+          "id": "6",
+          "quantity": 1,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 5,
+          "note": "",
+          "callMe": false,
+          "variants": [
+            {
+              "title": "Topping",
+              "selected": { "label": "Bacon", "price": 2 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "orderID": "ORD006",
+      "customerName": "Fiona Zaw",
+      "customerPhone": "234569456",
+      "orderDate": "2025-06-14T11:30:00Z",
+      "status": "Failed",
+      "totalAmount": 180,
+      "orderType": "delivery",
+      "deliveryAddress": {
+        "street": "88 Peace Road",
+        "city": "Naypyidaw",
+        "phone": "09990009999"
+      },
+      "items": [
+        {
+          "id": "7",
+          "quantity": 2,
+          "title": "Chicken Burger",
+          "image": "https://th.bing.com/th/id/OIP.swj8Jny2lUSn_zfPaeJQawHaHa",
+          "basePrice": 6,
+          "note": "Less spicy",
+          "callMe": true,
+          "variants": [
+            {
+              "title": "Size",
+              "selected": { "label": "XL", "price": 4 }
+            },
+            {
+              "title": "Sauce",
+              "selected": { "label": "Garlic", "price": 1 }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
