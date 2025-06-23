@@ -6,10 +6,15 @@ import { useDispatch } from "react-redux";
 import { HiOutlineMenu } from "react-icons/hi";
 import { toggleSidebar } from "@/store/slices/sidebarSlice";
 import { HiBellAlert } from "react-icons/hi2";
+import { useParams, useRouter } from "next/navigation";
 
 
 export default function TopNav() {
     const dispatch = useDispatch();
+    const router = useRouter();
+    // const params = useParams();
+    // const id = params.id as string;
+
 
     return (
         <header className="h-16 bg-white  shadow px-2 sm:px-6 flex items-center justify-between">
@@ -31,7 +36,7 @@ export default function TopNav() {
                     </div>
 
                 </div>
-                <div className="w-8 h-8 rounded-full overflow-hidden bg-slate-400">
+                <div onClick={() => router.push(`/dashboard/profile`)} className="w-8 h-8 cursor-pointer rounded-full overflow-hidden bg-slate-400">
                     <Image
                         src="/assets/avatar.png"
                         alt="Admin Avatar"

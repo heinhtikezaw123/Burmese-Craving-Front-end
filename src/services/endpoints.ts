@@ -3,6 +3,7 @@ export const endpoints: Record<string, string> = {
     login:"/login",
 	listing:"/listing",
     coupons:"/coupons",
-    orders:"/orders"
+    orders:"/orders",
+    vendors:"/vendors"
 
 }

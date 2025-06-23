@@ -67,11 +67,18 @@ const AllOrders = () => {
                 <p>Customer: <span className="font-medium">{order.customerName}</span></p>
                 <p>Date: {new Date(order.orderDate).toLocaleString()}</p>
                 <p>Status: <StatusBadge status={order.status} /></p>
-                <p>Type: {order.orderType}</p>
-                {order.orderType === 'delivery' && order.deliveryAddress && (
+                {order.orderType === 'delivery' ? (
+                    <div>
+                        {order.deliveryAddress && (
+                            <div className="pt-2 border-t border-gray-100 mt-2 space-y-1">
+                                <p>Deliver to: {order.deliveryAddress?.street}, {order.deliveryAddress?.city}</p>
+                                <p>Phone: {order.deliveryAddress.phone}</p>
+                            </div>
+                        )}
+                    </div>
+                ) : (
                     <div className="pt-2 border-t border-gray-100 mt-2 space-y-1">
-                        <p>Address: {order.deliveryAddress.street}, {order.deliveryAddress.city}</p>
-                        <p>Phone: {order.deliveryAddress.phone}</p>
+                        <p>Customer Pickup</p>
                     </div>
                 )}
             </div>

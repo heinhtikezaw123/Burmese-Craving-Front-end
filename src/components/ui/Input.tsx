@@ -5,6 +5,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string;
     error?: string;
     as?: 'input' | 'textarea' | 'file';
+    rows?: number;
 };
 
 export const Input = ({ label, error, as = 'input', ...props }: InputProps) => {
@@ -16,7 +17,8 @@ export const Input = ({ label, error, as = 'input', ...props }: InputProps) => {
             {label && <label className="block text-sm font-medium mb-1">{label}</label>}
 
             {as === 'textarea' ? (
-                <textarea {...(props as any)} className={commonClasses} />
+                <textarea
+                    {...(props as any)} className={commonClasses} />
             ) : (
                 <input
                     {...props}

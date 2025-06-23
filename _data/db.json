@@ -1,4 +1,64 @@
 {
+  "vendors": [
+    {
+      "id": "1",
+      "businessType": "restaurant",
+      "name": "Yangon Street Bites",
+      "address": "No(123), 45 St, Downtown, New York",
+      "mapLink": "https://maps.google.com/?q=No(123),+45+St,+Downtown,+New+York",
+      "deliveryTime": "25-30 mins",
+      "rating": 4,
+      "distance": 1.5,
+      "description": "Craving real Burmese street food? Yangon Street Bites brings you the bold, authentic flavors of Myanmar — from spicy mohinga to crispy samosas and tea shop classics.",
+      "reviews": 3,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.fMG7YbNVZpjRqO0EEnWt4QHaE6?rs=1&pid=ImgDetMain&cb=idpwebpc1",
+      "halalCertified": true,
+      "openHours": [
+        {
+          "day": "monday",
+          "open": "10:00",
+          "close": "21:00",
+          "isClosed": false
+        },
+        {
+          "day": "tuesday",
+          "open": "10:00",
+          "close": "21:00",
+          "isClosed": false
+        },
+        {
+          "day": "wednesday",
+          "open": "10:00",
+          "close": "21:00",
+          "isClosed": false
+        },
+        {
+          "day": "thursday",
+          "open": "10:00",
+          "close": "21:00",
+          "isClosed": false
+        },
+        {
+          "day": "friday",
+          "open": "10:00",
+          "close": "21:00",
+          "isClosed": false
+        },
+        {
+          "day": "saturday",
+          "open": "11:00",
+          "close": "22:00",
+          "isClosed": false
+        },
+        { "day": "sunday", "open": "", "close": "", "isClosed": true }
+      ],
+      "types": ["Burmese", "Street Food", "Tea Shop"],
+      "confidential_files": [
+        "https://th.bing.com/th/id/OIP.aaHCSDTfLygZvBxnOa0oVwHaE8?w=267&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+        "https://tse1.mm.bing.net/th/id/OIP.lNOm-JDoVfdpu2fNkDRzzgHaJ2?rs=1&pid=ImgDetMain"
+      ]
+    }
+  ],
   "shopItems": [
     {
       "id": "1",
@@ -49,7 +109,7 @@
       "orderID": "ORD001",
       "customerName": "Alice Smith",
       "customerPhone": "234569456",
-      "orderDate": "2025-06-14T09:00:00Z",
+      "orderDate": "2025-06-18T09:00:00Z",
       "status": "Pending",
       "totalAmount": 120,
       "orderType": "pickup",
@@ -92,7 +152,7 @@
       "orderID": "ORD002",
       "customerName": "Bob Johnson",
       "customerPhone": "234569456",
-      "orderDate": "2025-06-13T09:30:00Z",
+      "orderDate": "2025-06-17T09:30:00Z",
       "status": "Placed",
       "totalAmount": 200,
       "orderType": "delivery",

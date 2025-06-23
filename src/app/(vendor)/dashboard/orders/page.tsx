@@ -7,7 +7,7 @@ import { setActiveTab } from '@/store/slices/tabSlice';
 import TabNav from '@/components/ui/tabs/TabNav';
 
 const AllOrders = lazy(() => import('./all/page'));
-const TodayOrders = lazy(() => import('./todayOrders/page'));
+// const TodayOrders = lazy(() => import('./todayOrders/page'));
 const PendingOrders = lazy(() => import('./pending/page'));
 const CompletedOrders = lazy(() => import('./completed/page'));
 const CancelledOrders = lazy(() => import('./cancelled/page'));

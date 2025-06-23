@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { FiUploadCloud } from "react-icons/fi";
-import clsx from "clsx"; // Optional: use this for cleaner conditional class logic
+import clsx from "clsx";
 
 type Props = {
     onChange?: (file: File | null) => void;
+    defaultImage?: string | null;  // Add this line
+    label?: string
 };
 
-const ImageUpload = ({ onChange }: Props) => {
+const ImageUpload = ({ onChange, defaultImage = null }: Props) => {
     const [file, setFile] = useState<File | null>(null);
-    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+    const [previewUrl, setPreviewUrl] = useState<string | null>(defaultImage);
     const [uploadProgress, setUploadProgress] = useState<number>(0);
     const [uploading, setUploading] = useState<boolean>(false);
 
@@ -40,9 +42,9 @@ const ImageUpload = ({ onChange }: Props) => {
 
     useEffect(() => {
         return () => {
-            if (previewUrl) URL.revokeObjectURL(previewUrl);
+            if (previewUrl && previewUrl !== defaultImage) URL.revokeObjectURL(previewUrl);
         };
-    }, [previewUrl]);
+    }, [previewUrl, defaultImage]);
 
     return (
         <div className="w-full">
@@ -85,7 +87,6 @@ const ImageUpload = ({ onChange }: Props) => {
                     </label>
                 )}
 
-                {/* Progress Bar */}
                 {uploading && (
                     <div className="absolute bottom-0 left-0 w-full h-2 bg-gray-200 rounded-b-md overflow-hidden">
                         <div

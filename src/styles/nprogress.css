@@ -2,8 +2,15 @@
 #nprogress {
   pointer-events: none;
 }
+
 #nprogress .bar {
-  background: oklch(0.67 0.2021 39.58);
+  background: linear-gradient(
+    to left,
+    rgb(249, 121, 67) 0%,
+    rgb(249, 121, 67) 20%,
+    oklch(0.67 0.2021 39.58) 20%,
+    oklch(0.67 0.2021 39.58) 100%
+  );
   position: fixed;
   z-index: 9999;
   top: 0;
