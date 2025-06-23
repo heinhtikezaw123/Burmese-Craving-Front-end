@@ -1,24 +1,29 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { useGetEndpointQuery } from "@/services/apiSlice";
 import { endpoints } from "@/services/endpoints";
 import { FaStar, FaRegClock } from "react-icons/fa";
 import Link from "next/link";
+import OperatingDetails from "./OperationDetail";
+import OperatingDetailsEditor from "./OperatingDetailsEditor";
 
 const VendorProfilePage = () => {
     const [isClosedToday, setIsClosedToday] = React.useState(false);
     const [closeNote, setCloseNote] = React.useState('');
     const [showCloseInput, setShowCloseInput] = React.useState(false);
 
-    const vendorId = useSelector((state: RootState) => state.auth.userData?.id);
+    const [openHours, setOpenHours] = useState<any>('');
+
+
+    // const vendorId = useSelector((state: RootState) => state.auth.userData?.id);
     const { data: vendor, isLoading, error } = useGetEndpointQuery(`${endpoints.vendors}/1`);
 
     useEffect(() => {
-        console.log("vendor detail", vendorId);
-    }, [vendorId]);
+        setOpenHours(vendor?.openHours)
+    }, [vendor]);
 
     const today = new Date().toLocaleDateString("en-US", { weekday: "long" }).toLowerCase();
 
@@ -54,10 +59,10 @@ const VendorProfilePage = () => {
                                 ))}
                             </div>
                         )}
-                        <div className="flex items-center gap-2 mb-2">
+                        {/* <div className="flex items-center gap-2 mb-2">
                             <FaRegClock className="text-gray-600" />
                             <span className="text-gray-800 text-sm">{vendor.deliveryTime}</span>
-                        </div>
+                        </div> */}
                         {/* <p className="text-sm text-gray-600 mb-2">Distance: {vendor.distance} km</p> */}
 
                         <div className="flex items-center gap-1 text-orange-500 text-sm mb-3">
@@ -91,7 +96,17 @@ const VendorProfilePage = () => {
                     </div>
 
                     {/* Operating Details */}
-                    <div className="sm:col-span-3 mt-4">
+                    {/* <OperatingDetails openHours={vendor.openHours} today={today} /> */}
+                    {
+                        openHours && (
+                            <OperatingDetailsEditor
+                                openHours={openHours}
+                                today={today}
+                                onChange={(updated) => setOpenHours(updated)}
+                            />
+                        )
+                    }
+                    {/* <div className="sm:col-span-3 mt-4">
                         <h3 className="text-lg font-semibold mb-2">Operating Details</h3>
 
                         <div className="mb-4">
@@ -172,7 +187,7 @@ const VendorProfilePage = () => {
                         })}
 
 
-                    </div>
+                    </div> */}
 
 
 
